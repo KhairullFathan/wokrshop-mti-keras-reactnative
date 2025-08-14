@@ -188,7 +188,7 @@ def predict():                                            # inisialisasi fungsi 
 ### 3.3.6. Testing request `predict/`
 
 ```bash
-curl -X POST -F "file=@D:\0004DEV\008Experimen\DigitHadwriting\dataset\2\Two_full (1).jpg" http://localhost:5000/predict
+curl -X POST -F "file=@file.jpg" http://localhost:5000/predict
 ```
 
 ### 3.3.7. Kode Lengkap `app.py`
