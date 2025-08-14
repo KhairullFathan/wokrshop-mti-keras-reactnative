@@ -642,11 +642,11 @@
 
 <span class="c1"># Split dataset</span>
 <span class="n">splitfolders</span><span class="o">.</span><span class="n">ratio</span><span class="p">(</span>
-    <span class="n">path</span><span class="p">,</span>                      <span class="c1"># Folder dataset asli di yang berada di root google colab</span>
-    <span class="n">output</span><span class="o">=</span><span class="s2">&quot;split_dataset&quot;</span><span class="p">,</span>    <span class="c1"># Folder output hasil split</span>
-    <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>                   <span class="c1"># Random seed untuk reproducibility</span>
-    <span class="n">ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>     <span class="c1"># Rasio train, val, test</span>
-    <span class="n">group_prefix</span><span class="o">=</span><span class="kc">None</span>          <span class="c1"># Tidak mengelompokkan berdasarkan prefix</span>
+  <span class="n">path</span><span class="p">,</span>                      <span class="c1"># Folder dataset asli di yang berada di root google colab</span>
+  <span class="n">output</span><span class="o">=</span><span class="s2">&quot;split_dataset&quot;</span><span class="p">,</span>    <span class="c1"># Folder output hasil split</span>
+  <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>                   <span class="c1"># Random seed untuk reproducibility</span>
+  <span class="n">ratio</span><span class="o">=</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>     <span class="c1"># Rasio train, val, test</span>
+  <span class="n">group_prefix</span><span class="o">=</span><span class="kc">None</span>          <span class="c1"># Tidak mengelompokkan berdasarkan prefix</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -659,49 +659,49 @@
 <span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">32</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">create_data</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
-    <span class="c1"># Augmentasi untuk data training</span>
-    <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
-        <span class="n">rescale</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span>           <span class="c1"># Normalisasi pixel [0, 1]</span>
-        <span class="n">rotation_range</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>           <span class="c1"># Rotasi gambar ±40 derajat</span>
-        <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>       <span class="c1"># Geser horizontal 20%</span>
-        <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>      <span class="c1"># Geser vertikal 20%</span>
-        <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>             <span class="c1"># Shear transformasi</span>
-        <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>              <span class="c1"># Zoom in/out 20%</span>
-        <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>        <span class="c1"># Flip horizontal</span>
-        <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span>          <span class="c1"># Isi pixel kosong dengan nearest</span>
-    <span class="p">)</span>
+  <span class="c1"># Augmentasi untuk data training</span>
+  <span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rescale</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">255</span><span class="p">,</span>           <span class="c1"># Normalisasi pixel [0, 1]</span>
+    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>           <span class="c1"># Rotasi gambar ±40 derajat</span>
+    <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>       <span class="c1"># Geser horizontal 20%</span>
+    <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>      <span class="c1"># Geser vertikal 20%</span>
+    <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>             <span class="c1"># Shear transformasi</span>
+    <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>              <span class="c1"># Zoom in/out 20%</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>        <span class="c1"># Flip horizontal</span>
+    <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span>          <span class="c1"># Isi pixel kosong dengan nearest</span>
+  <span class="p">)</span>
 
-    <span class="c1"># Hanya normalisasi untuk validation &amp; test (tanpa augmentasi)</span>
-    <span class="n">val_test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">255</span><span class="p">)</span>
+  <span class="c1"># Hanya normalisasi untuk validation &amp; test (tanpa augmentasi)</span>
+  <span class="n">val_test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">255</span><span class="p">)</span>
 
-    <span class="c1"># Generator untuk data training</span>
-    <span class="n">train_ds</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/train&quot;</span><span class="p">,</span>
-        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
-        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
-        <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
-        <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span>
-    <span class="p">)</span>
+  <span class="c1"># Generator untuk data training</span>
+  <span class="n">train_ds</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/train&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span>
+  <span class="p">)</span>
 
-    <span class="c1"># Generator untuk data validation</span>
-    <span class="n">val_ds</span> <span class="o">=</span> <span class="n">val_test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/val&quot;</span><span class="p">,</span>
-        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
-        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
-        <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
-        <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span>
-    <span class="p">)</span>
+  <span class="c1"># Generator untuk data validation</span>
+  <span class="n">val_ds</span> <span class="o">=</span> <span class="n">val_test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/val&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span>
+  <span class="p">)</span>
 
-    <span class="c1"># Generator untuk data testing</span>
-    <span class="n">test_ds</span> <span class="o">=</span> <span class="n">val_test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/test&quot;</span><span class="p">,</span>
-        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
-        <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
-        <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
-        <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># Tidak di-shuffle untuk evaluasi</span>
-    <span class="p">)</span>
+  <span class="c1"># Generator untuk data testing</span>
+  <span class="n">test_ds</span> <span class="o">=</span> <span class="n">val_test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">directory</span><span class="si">}</span><span class="s2">/test&quot;</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">),</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># Tidak di-shuffle untuk evaluasi</span>
+  <span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">train_ds</span><span class="p">,</span> <span class="n">val_ds</span><span class="p">,</span> <span class="n">test_ds</span>
+  <span class="k">return</span> <span class="n">train_ds</span><span class="p">,</span> <span class="n">val_ds</span><span class="p">,</span> <span class="n">test_ds</span>
 
 <span class="c1"># Panggil fungsi untuk membuat dataset</span>
 <span class="n">train_ds</span><span class="p">,</span> <span class="n">val_ds</span><span class="p">,</span> <span class="n">test_ds</span> <span class="o">=</span> <span class="n">create_data</span><span class="p">(</span><span class="s2">&quot;split_dataset&quot;</span><span class="p">)</span>
@@ -714,32 +714,32 @@
 
 <span class="c1"># Membangun model CNN</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
-    <span class="c1"># Blok Convolutional 1</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+  <span class="c1"># Blok Convolutional 1</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
 
-    <span class="c1"># Blok Convolutional 2</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+  <span class="c1"># Blok Convolutional 2</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
 
-    <span class="c1"># Blok Convolutional 3</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+  <span class="c1"># Blok Convolutional 3</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
 
-    <span class="c1"># Flatten untuk Fully Connected Layer</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+  <span class="c1"># Flatten untuk Fully Connected Layer</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
 
-    <span class="c1"># Dense Layers</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>  <span class="c1"># Dropout untuk mengurangi overfitting</span>
-    <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)</span>  <span class="c1"># Output layer (10 kelas angka 0-9)</span>
+  <span class="c1"># Dense Layers</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>  <span class="c1"># Dropout untuk mengurangi overfitting</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)</span>  <span class="c1"># Output layer (10 kelas angka 0-9)</span>
 <span class="p">])</span>
 
 <span class="c1"># Kompilasi model</span>
 <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-    <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
-    <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
+  <span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+  <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="c1"># Ringkasan model</span>
@@ -750,9 +750,9 @@
 <p>Melatih model menggunakan <code>model.fit()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Training model</span>
 <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-    <span class="n">train_ds</span><span class="p">,</span>
-    <span class="n">validation_data</span><span class="o">=</span><span class="n">val_ds</span><span class="p">,</span>
-    <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>  <span class="c1"># Jumlah epoch maksimum</span>
+  <span class="n">train_ds</span><span class="p">,</span>
+  <span class="n">validation_data</span><span class="o">=</span><span class="n">val_ds</span><span class="p">,</span>
+  <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>  <span class="c1"># Jumlah epoch maksimum</span>
 <span class="p">)</span>
 </code></pre></div>
 <h3 id="plot-hasil-training">Plot Hasil Training<a class="headerlink" href="#plot-hasil-training" title="Permanent link">&para;</a></h3>
