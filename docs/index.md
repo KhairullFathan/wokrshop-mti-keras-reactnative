@@ -26,7 +26,7 @@ Semua langkah disusun agar Anda dapat memahami alur kerja dari persiapan dataset
 
 ---
 
-## 🛠 Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - **Python** untuk machine learning & backend
 - **TensorFlow / Keras** untuk pelatihan model
