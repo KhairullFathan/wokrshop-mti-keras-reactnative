@@ -22,12 +22,12 @@ Dataset ini berisi gambar angka tulisan tangan dari 0 hingga 9 dengan karakteris
 
 Dataset ini memiliki beberapa ciri khas yang membedakannya dari MNIST:
 
-🎯 **Notasi Eropa**:
+**Notasi Eropa**:
 
 - Khususnya angka **1** dan **7** memiliki gaya penulisan yang berbeda dengan notasi Amerika
 - Beberapa angka mungkin memiliki **border hitam kecil** di sekelilingnya
 
-🖼️ **Format Gambar**:
+**Format Gambar**:
 
 - Berwarna (RGB) dibanding MNIST yang grayscale
 - Resolusi lebih besar (90x140px) dibanding MNIST (28x28px)

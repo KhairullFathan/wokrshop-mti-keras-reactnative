@@ -5,7 +5,7 @@ Semua langkah disusun agar Anda dapat memahami alur kerja dari persiapan dataset
 
 ---
 
-## 📚 Daftar Isi
+## Daftar Isi
 
 - **[Persiapan Dataset](001-dataset.md)**  
   Panduan menyiapkan dataset yang digunakan untuk proses pelatihan dan pengujian model.
@@ -18,7 +18,7 @@ Semua langkah disusun agar Anda dapat memahami alur kerja dari persiapan dataset
 
 ---
 
-## 🎯 Tujuan Dokumentasi
+## Tujuan Dokumentasi
 
 1. Memberikan panduan yang jelas untuk memahami alur pengembangan workshop.
 2. Memudahkan peserta dalam mengikuti langkah-langkah integrasi model `.keras` ke aplikasi React Native.
@@ -34,12 +34,8 @@ Semua langkah disusun agar Anda dapat memahami alur kerja dari persiapan dataset
 
 ---
 
-## 🧰 Tools Requirement
+## Tools Requirement
 
 - **Node.js** versi terbaru [Download Node.js](https://nodejs.org/)
 - **Python 3.12.0** [Download Python](https://www.python.org/downloads/release/python-3120/)
 - **Visual Studio Code** sebagai code editor utama [Download VS Code](https://code.visualstudio.com/)
-
----
-
-> 💡 **Tips:** Gunakan menu navigasi di sisi kiri untuk berpindah antar halaman dengan cepat.
