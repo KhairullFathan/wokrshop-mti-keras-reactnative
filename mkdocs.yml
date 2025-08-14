@@ -1,0 +1,38 @@
+site_name: Workshop Implementasi model.keras ke React Native (Expo)
+# site_url: https://username.github.io/nama-repo/
+site_author: Khairul F. Habie
+site_description: Dokumentasi Implementasi model.keras ke aplikasi berbasis React Native dengan Framework Expo
+nav:
+  - Beranda: index.md
+  - Persiapan Dataset: 001-dataset.md
+  - Training & Testing Model: 002-TraningTesting.md
+  - Backend: 003-backend.md
+  - Frontend: 004-frontend.md
+theme:
+  name: material
+  language: id
+  features:
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: indigo
+    accent: deep purple
+extra_css:
+  - styles.css
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - codehilite:
+      guess_lang: false
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
