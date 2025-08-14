@@ -799,7 +799,7 @@ python<span class="w"> </span>app.py
     <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)}),</span> <span class="mi">500</span>                <span class="c1"># mengembalikan pesan error dengan kode 500</span>
 </code></pre></div>
 <h3 id="336-testing-request-predict">3.3.6. Testing request <code>predict/</code><a class="headerlink" href="#336-testing-request-predict" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;file=@D:\0004DEV\008Experimen\DigitHadwriting\dataset\2\Two_full (1).jpg&quot;</span><span class="w"> </span>http://localhost:5000/predict
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;file=@file.jpg&quot;</span><span class="w"> </span>http://localhost:5000/predict
 </code></pre></div>
 <h3 id="337-kode-lengkap-apppy">3.3.7. Kode Lengkap <code>app.py</code><a class="headerlink" href="#337-kode-lengkap-apppy" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># import library</span>
